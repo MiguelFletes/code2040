@@ -1,0 +1,15 @@
+# Miguel Fletes
+# 10/01/16
+# http request
+
+import json
+import requests
+
+#creates a python dictionary with keys of token and github inputed with the relevent information
+dict = {'token': '0e1e59225d9d829f797fa3f846625a20', 'github': 'https://github.com/MiguelFletes/code2040.git'}
+
+#post request goes to the url's api and checks it with the json dictionary
+httpRequest = requests.post('http://challenge.code2040.org/api/register', json = dict)
+
+#display contents from the variable
+print httpRequest.content
